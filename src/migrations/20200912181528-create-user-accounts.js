@@ -12,8 +12,8 @@ module.exports = {
         type: Sequelize.INTEGER.UNSIGNED,
         unique: 'user_account',
         references: {
-          model: 'Users', // <<< Note, its table's name, not object name
-          referencesKey: 'id' // <<< Note, its a column name
+          model: 'Users', 
+          referencesKey: 'id'
         }
       },
       account: {
