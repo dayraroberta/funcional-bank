@@ -1,0 +1,19 @@
+version: "3.4"
+services:
+  funcional_bank:
+    build: .
+    container_name: funcional_bank_api
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+  db:
+    image: mysql
+    container_name: funcional_bank_db
+    environment:
+    - MYSQL_USER=root
+    - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    - MYSQL_DATABASE=funcional_bank
+    ports:
+    - 3306:3306
+
