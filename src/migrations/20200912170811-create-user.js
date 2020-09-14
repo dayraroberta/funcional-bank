@@ -9,15 +9,19 @@ module.exports = {
         type: Sequelize.INTEGER.UNSIGNED
       },
       name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lastname: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       cpf: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       birthday: {
+        allowNull: false,
         type: Sequelize.DATE
       },
       createdAt: {

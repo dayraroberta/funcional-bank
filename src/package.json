@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "migrate": "npx sequelize-cli db:migrate --config=config/config.js",
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",

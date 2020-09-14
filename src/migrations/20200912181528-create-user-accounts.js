@@ -8,21 +8,24 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER.UNSIGNED
       },
-      users_id: {
+      userId: {
         type: Sequelize.INTEGER.UNSIGNED,
-        unique: 'user_account',
+        allowNull: false,
         references: {
           model: 'Users', 
           referencesKey: 'id'
         }
       },
       account: {
+        allowNull: false,
         type: Sequelize.STRING(45)
       },
       agency: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.STRING(45)
       },
       balance: {
+        allowNull: false,
         type: Sequelize.FLOAT
       },
       createdAt: {
