@@ -314,6 +314,7 @@ const balanceController = async (req, res, next) => {
 }
 
 const createAccountController = async (req, res, next) => {
+    console.log(req.body);
     if (!helpers.existsAndHasValue(req.body, 'name')) {
         return res.status(422).json({
             success: false,
