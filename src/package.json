@@ -3,15 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "migrate": "npx sequelize-cli db:migrate --config=config/config.js",
-    "start": "node ./bin/www",
-    "dev": "nodemon ./bin/www",
+    "migrate": "sleep 20s && npx sequelize-cli db:migrate --config=config/config.js",
+    "start": "npm run migrate && node ./bin/www",
+    "dev": "npm run migrate && nodemon ./bin/www",
     "test": "nyc --all mocha"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
     "chai": "^4.2.0",
     "chai-http": "^4.3.0",
+    "chai-subset": "^1.6.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",

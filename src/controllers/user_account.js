@@ -174,7 +174,6 @@ const depositMoneyController = async (req, res, next) => {
                 agency: agency
             }
         });
-        console.log(get_account.balance);
 
         if (get_account.length <= 0) {
             return res.status(404).json({
@@ -272,7 +271,7 @@ const balanceController = async (req, res, next) => {
         }
     });
 
-    if (get_account.length <= 0) {
+    if (get_account == null) {
         return res.status(404).json({
             success: false,
             message: 'account not found',
